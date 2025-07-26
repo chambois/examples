@@ -4,6 +4,10 @@
 
 - Run `./gradlew build`
 
+## Testing
+
+- Run `./gradlew test`
+
 ## Notes
 
 - Domain is isolated: No dependency on Spring or JPA.

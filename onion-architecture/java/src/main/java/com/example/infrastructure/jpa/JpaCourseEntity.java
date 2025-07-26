@@ -1,5 +1,7 @@
 package com.example.infrastructure.jpa;
 
+import jakarta.persistence.*;
+
 @Entity
 public class JpaCourseEntity {
 

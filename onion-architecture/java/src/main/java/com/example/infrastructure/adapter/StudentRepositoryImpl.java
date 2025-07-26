@@ -2,6 +2,7 @@ package com.example.infrastructure.adapter;
 
 import com.example.application.ports.StudentRepository;
 import com.example.domain.Student;
+import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @Repository

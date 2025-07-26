@@ -1,5 +1,6 @@
 package com.example.infrastructure.jpa;
 
+import jakarta.persistence.*;
 import java.util.*;
 
 @Entity

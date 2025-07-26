@@ -1,14 +1,14 @@
 # Onion architecture - Java example
 
-## Setup
+## Building
 
-- Install gradle
-- Run `gradle build`
+- Run `./gradlew build`
 
 ## Notes
 
 - Domain is isolated: No dependency on Spring or JPA.
-- Application layer coordinates use cases and interacts via interfaces.
+- Application layer coordinates use cases and interacts via interfaces. It also
+  has no dependency on Spring or JPA.
 - Infrastructure provides implementations (in-memory here, could be JPA).
 - Controller/UI only calls into the application layer.
 

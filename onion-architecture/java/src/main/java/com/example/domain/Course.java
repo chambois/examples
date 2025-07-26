@@ -1,6 +1,7 @@
 package com.example.domain;
 
 public class Course {
+
     private Long id;
     private String title;
 

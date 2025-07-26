@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Student {
+
     private Long id;
     private String name;
     private Set<Course> enrolledCourses = new HashSet<>();
@@ -13,7 +14,7 @@ public class Student {
         this.name = name;
     }
 
-    public void enroll(Course course) {
+    public void enrol(Course course) {
         if (enrolledCourses.contains(course)) {
             throw new IllegalStateException("Already enrolled in course");
         }

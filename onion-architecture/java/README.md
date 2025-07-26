@@ -1,31 +1,36 @@
 # Onion architecture - Java example
 
-Note that:
+## Setup
+
+- Install gradle
+- Run `gradle build`
+
+## Notes
 
 - Domain is isolated: No dependency on Spring or JPA.
 - Application layer coordinates use cases and interacts via interfaces.
 - Infrastructure provides implementations (in-memory here, could be JPA).
 - Controller/UI only calls into the application layer.
 
-## Layers
+### Layers
 
 - Domain Model: Student, Course
-- Domain Services: EnrollmentService
-- Application Services: EnrollmentApplicationService
+- Domain Services: EnrolmentService
+- Application Services: EnrolmentApplicationService
 - Infrastructure: JPA Repositories
 - UI Layer: Spring REST controllers
 
-## Q&A
+### Q&A
 
-- Why does the EntrollmentService live as part of the domain and not the
+- Why does the EnrolmentService live as part of the domain and not the
   application?
-  - The EnrollmentService lives in the Domain Layer because enrollment itself is
-    a core domain concept, not just a coordination of infrastructure or a
-    specific application workflow.
-  - The EnrollmentService isn’t responsible for fetching students, saving data,
+  - The EnrolmentService lives in the Domain Layer because enrolment itself is a
+    core domain concept, not just a coordination of infrastructure or a specific
+    application workflow.
+  - The EnrolmentService isn’t responsible for fetching students, saving data,
     or logging. Instead, it:
-    - Enforces a core rule: “A student cannot enroll in the same course twice.”
-    - Mutates domain state (i.e., adding the course to the student’s enrollment
+    - Enforces a core rule: “A student cannot enrol in the same course twice.”
+    - Mutates domain state (i.e., adding the course to the student’s enrolment
       list).
     - Knows nothing about persistence, HTTP, or frameworks
   - Domain services often encapsulate domain rules that don’t naturally belong

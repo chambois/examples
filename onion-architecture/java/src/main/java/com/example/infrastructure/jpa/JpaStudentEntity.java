@@ -1,10 +1,10 @@
 package com.example.infrastructure.jpa;
 
-import jakarta.persistence.*;
 import java.util.*;
 
 @Entity
 public class JpaStudentEntity {
+
     @Id
     @GeneratedValue
     private Long id;
